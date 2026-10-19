@@ -1,0 +1,19 @@
+@media(min-width:768px){
+.hamburger{
+    display: none;
+}
+.headercop{
+    display: block;
+    color: #8792A1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    padding-right: 30px;
+}
+.formcontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+label .blockiha{
+    display: inline-block;
+}
+}

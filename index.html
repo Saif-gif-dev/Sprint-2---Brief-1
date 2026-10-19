@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpDesk</title>
+    <link rel="stylesheet" href="\css\style.css">
+    <link rel="stylesheet" href="\css\responsive.css">
+    <link rel="stylesheet" href="\Js\script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img class="hlogo" src="\assets\image.png" alt="HelpDesk Logo">
+            <button class="hamburger">
+                ☰
+            </button>
+            <p class="headercop">Atlas Solutions / Support</p>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="firsttwo">
+                <div class="heading">
+                    <h1>Gestion des demandes</h1>
+                </div>
+                <div class="description">
+                    <p>Suivez et gérez les incidents informatiques.</p>
+                </div>
+            </div>
+
+        </section>
+        <section class="formulaire">
+            <div class="lastwo">
+                <div class="headingtwo">
+                    <h1>Créer une demande</h1>
+                </div>
+                <div class="soushead">
+                    <p>Décrivez votre problème informatique.</p>
+                </div>
+            </div>
+            <form class="formcontainer">
+                <div>
+                    <label for="titreprob">Titre du problème *</label><br>
+                    <input type="text" id="titreprob" name="titreprob" placeholder="Connexion Wi-Fi instable">
+                </div>
+                <label for="category">Catégorie *:</label><br>
+                <select class="my-select" name="category" id="category">
+                    <option value="Réseau">Réseau</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select><br>
+
+                <label for="priority">Priorité *:</label><br>
+                <select class="my-select" name="priority" id="priority">
+                    <option value="Haute">Haute</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+
+                <div class="descriptionInput">
+                    <label for="desc">Description *</label><br>
+                    <input type="text" id="desc" name="desc" placeholder="Décrivez votre problème...">
+                </div>
+                <input class="bluebutton" type="submit" value="＋ Ajouter la demande">
+            </form>
+        </section>
+        <section class="listedemande">
+            <div class="listhead">
+                <h1>Liste des demandes</h1>
+            </div>
+            <div class="nbredemande">
+                <p>3 demandes</p>
+            </div>
+            </div>
+
+        </section>
+        <section class="card">
+            <article class="onecard">
+                <div class="icons">
+                    <i class="fa-solid fa-signal"></i>
+                    <p class="code">HD-001</p>
+                </div>
+                <h2 class="card-head">Connexion Wi-Fi instable</h2>
+                <p class="sous-card">Le réseau se déconnecte régulièrement.</p>
+                <div class="likebuttons">
+                    <p class="rectone">Réseau</p>
+                    <p class="rectwo">Haute</p>
+                </div>
+                <hr class="separator">
+                <div class="edits">
+                    <h5 class="modify"><i class="fa-solid fa-pencil"></i>Modifier</h5>
+                    <h5 class="delete"><i class="fa-solid fa-trash"></i>Supprimer</h5>
+                </div>
+            </article>
+            <!------------------------------------------------------second card------------------------------------>
+            <article class="onecard">
+                <div class="icons">
+                    <i class="fa-solid fa-download"></i>
+                    <p class="code">HD-002</p>
+                </div>
+                <h2 class="card-head">Installation d’un logiciel</h2>
+                <p class="sous-card">Installer un logiciel sur le poste.</p>
+                <div class="likebuttons">
+                    <p class="logiciel-color">Logiciel</p>
+                    <p class="normale-color">Normale</p>
+                </div>
+                <hr class="separator">
+                <div class="edits">
+                    <h5 class="modify"><i class="fa-solid fa-pencil"></i>Modifier</h5>
+                    <h5 class="delete"><i class="fa-solid fa-trash"></i>Supprimer</h5>
+                </div>
+            </article>
+<!------------------------------------------------------third card------------------------------------>
+            <article class="onecard">
+                <div class="icons">
+                    <i class="fa-solid fa-keyboard"></i>
+                    <p class="code">HD-003</p>
+                </div>
+                <h2 class="card-head">Installation d’un logiciel</h2>
+                <p class="sous-card">Installer un logiciel sur le poste.</p>
+                <div class="likebuttons">
+                    <p class="Materiel-color">Matériel</p>
+                    <p class="Basse-color">Basse</p>
+                </div>
+                <hr class="separator">
+                <div class="edits">
+                    <h5 class="modify"><i class="fa-solid fa-pencil"></i>Modifier</h5>
+                    <h5 class="delete"><i class="fa-solid fa-trash"></i>Supprimer</h5>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
