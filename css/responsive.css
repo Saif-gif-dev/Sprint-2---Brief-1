@@ -1,19 +1,72 @@
-@media(min-width:768px){
-.hamburger{
-    display: none;
+@media(min-width:768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .headercop {
+        display: block;
+        color: #8792A1;
+        font-family: 'Inter', sans-serif;
+        font-size: 11px;
+        padding-right: 30px;
+    }
+
+    .formcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .descriptionInput input {
+        display: grid;
+        
+    }
+
+    input {
+        border-radius: 4px;
+        border: solid #D5DADF 1px;
+        width: 85%;
+    }
+
+    select {
+        width: 85%;
+    }
+
+    .bluebutton {
+        display: flex;
+        justify-self: right;
+        width: 25%;
+        padding: 7px;
+        margin-top: 20px;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
-.headercop{
-    display: block;
-    color: #8792A1;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    padding-right: 30px;
-}
-.formcontainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-label .blockiha{
-    display: inline-block;
-}
+
+/*=================================desktop===========================================*/
+
+@media (min-width: 1024px) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .formcontainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+    .descriptionInput{
+        grid-column: 1/4;
+    }
+    .descriptionInput input{
+        width: 95%;
+        height: 30px;
+    }
+    .bluebutton {
+        margin-top: 25px;
+    }
+    
 }

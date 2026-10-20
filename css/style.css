@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+  }
 main {
     background-color: #F7F8FA;
     padding: 30px 20px;
@@ -25,7 +28,7 @@ nav {
 
 .heading {
     color: #202A38;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Inter', sans-serif;
     font-size: 11px;
 }
 
@@ -37,13 +40,13 @@ nav {
 
 .headingtwo {
     color: #202A38;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Inter', sans-serif;
     font-size: 8px;
 }
 
 .soushead {
     color: #8792A1;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 8px;
 }
 input::placeholder {
@@ -52,7 +55,7 @@ input::placeholder {
 
 label {
     color: #202A38;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 9px;
 }
@@ -60,6 +63,7 @@ label {
 input {
     border-radius: 4px;
     border: solid #D5DADF 1px;
+    width: 100%;
 }
 
 select {
@@ -99,14 +103,14 @@ select {
 }
 .listhead {
     color: #202A38;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Inter', sans-serif;
     font-size: 8px;
 }
 .nbredemande {
     background-color: #EBEFF4;
     color: #5C697B;
     border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 8px;
     padding: 0px 15px;
@@ -129,16 +133,16 @@ select {
 }
 .code{
     color: #99A4B2;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 .card-head{
     color: #202A38;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
 }
 .sous-card{
     color: #8792A1;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 11px;
 }
 .likebuttons{
@@ -148,7 +152,7 @@ select {
 .rectone{
     background-color: #F0F3F7;
     color: #64748B;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 13px;
     padding: 5px 18px;
@@ -157,7 +161,7 @@ select {
 .rectwo{
     background-color: #FFF0E8;
     color: #BA6444;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 13px;
     padding: 5px 18px;
@@ -175,7 +179,7 @@ select {
     padding-right: 10px;
 }
 .modify{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #617084;
 }
 .modify i{
@@ -183,7 +187,7 @@ select {
 
 }
 .delete{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #CC626A;
 }
 .delete i{
@@ -193,7 +197,7 @@ select {
 .logiciel-color{
      background-color: #F0F3F7;
     color: #64748B;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 13px;
     padding: 5px 18px;
@@ -203,7 +207,7 @@ select {
 .normale-color{
      background-color: #FFF5DF;
     color: #A67A2B;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 13px;
     padding: 5px 18px;
@@ -212,7 +216,7 @@ select {
 .Materiel-color{
      background-color: #F0F3F7;
     color: #64748B;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 13px;
     padding: 5px 18px;
@@ -222,7 +226,7 @@ select {
 .Basse-color{
      background-color: #E8F6EE;
     color: #388867;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 13px;
     padding: 5px 18px;

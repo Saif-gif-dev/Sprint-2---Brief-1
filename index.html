@@ -7,8 +7,11 @@
     <title>HelpDesk</title>
     <link rel="stylesheet" href="\css\style.css">
     <link rel="stylesheet" href="\css\responsive.css">
-    <link rel="stylesheet" href="\Js\script.js">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -47,28 +50,33 @@
                     <label for="titreprob">Titre du problème *</label><br>
                     <input type="text" id="titreprob" name="titreprob" placeholder="Connexion Wi-Fi instable">
                 </div>
-                <label for="category">Catégorie *:</label><br>
-                <select class="my-select" name="category" id="category">
-                    <option value="Réseau">Réseau</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select><br>
-
-                <label for="priority">Priorité *:</label><br>
-                <select class="my-select" name="priority" id="priority">
-                    <option value="Haute">Haute</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-
+                <div>
+                    <label for="category">Catégorie *:</label><br>
+                    <select class="my-select" name="category" id="category">
+                        <option value="Réseau">Réseau</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select><br>
+                </div>
+                <div>
+                    <label for="priority">Priorité *:</label><br>
+                    <select class="my-select" name="priority" id="priority">
+                        <option value="Haute">Haute</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </div>
                 <div class="descriptionInput">
                     <label for="desc">Description *</label><br>
                     <input type="text" id="desc" name="desc" placeholder="Décrivez votre problème...">
                 </div>
-                <input class="bluebutton" type="submit" value="＋ Ajouter la demande">
             </form>
+
+            <div class="btn-blue">
+                <input class="bluebutton" type="submit" value="＋ Ajouter la demande">
+            </div>
         </section>
         <section class="listedemande">
             <div class="listhead">
@@ -116,7 +124,7 @@
                     <h5 class="delete"><i class="fa-solid fa-trash"></i>Supprimer</h5>
                 </div>
             </article>
-<!------------------------------------------------------third card------------------------------------>
+            <!------------------------------------------------------third card------------------------------------>
             <article class="onecard">
                 <div class="icons">
                     <i class="fa-solid fa-keyboard"></i>
