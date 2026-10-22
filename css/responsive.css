@@ -18,7 +18,7 @@
 
     .descriptionInput input {
         display: grid;
-        
+
     }
 
     input {
@@ -37,6 +37,8 @@
         width: 25%;
         padding: 7px;
         margin-top: 20px;
+        font-weight: bold;
+        font-family: 'Inter', sans-serif;
     }
 
     .card {
@@ -56,17 +58,25 @@
 
     .formcontainer {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr;
     }
-    .descriptionInput{
+
+    .descriptionInput {
         grid-column: 1/4;
     }
-    .descriptionInput input{
+
+    .descriptionInput input {
         width: 95%;
         height: 30px;
     }
+
     .bluebutton {
         margin-top: 25px;
+        padding: 5px 30px;
+        margin: 10px 0px;
+        font-weight: bold;
+        font-family: 'Inter', sans-serif;
+        width: 210px;
     }
-    
+
 }

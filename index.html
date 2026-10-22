@@ -7,7 +7,6 @@
     <title>HelpDesk</title>
     <link rel="stylesheet" href="\css\style.css">
     <link rel="stylesheet" href="\css\responsive.css">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,37 +44,39 @@
                     <p>Décrivez votre problème informatique.</p>
                 </div>
             </div>
-            <form class="formcontainer">
+            <form class="formcontainer" id="problemform">
+
                 <div>
                     <label for="titreprob">Titre du problème *</label><br>
-                    <input type="text" id="titreprob" name="titreprob" placeholder="Connexion Wi-Fi instable">
+                    <input type="text" id="titreInput" placeholder="Connexion Wi-Fi instable">
                 </div>
+
                 <div>
                     <label for="category">Catégorie *:</label><br>
-                    <select class="my-select" name="category" id="category">
+                    <select class="my-select" id="categoryProblem">
                         <option value="Réseau">Réseau</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value="Logiciel">Logiciel</option>
+                        <option value="Matériel">Matériel</option>
                     </select><br>
                 </div>
+
                 <div>
                     <label for="priority">Priorité *:</label><br>
-                    <select class="my-select" name="priority" id="priority">
+                    <select class="my-select" name="priority" id="priorityProblem">
+                        <option value="Basse">Basse</option>
+                        <option value="Normale">Normale</option>
                         <option value="Haute">Haute</option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
                     </select>
                 </div>
                 <div class="descriptionInput">
                     <label for="desc">Description *</label><br>
-                    <input type="text" id="desc" name="desc" placeholder="Décrivez votre problème...">
+                    <input type="text" id="descproblem" placeholder="Décrivez votre problème...">
                 </div>
             </form>
 
             <div class="btn-blue">
-                <input class="bluebutton" type="submit" value="＋ Ajouter la demande">
+                <button class="bluebutton" id="buttonAjouter" type="button">
+                    ＋ Ajouter la demande </button>
             </div>
         </section>
         <section class="listedemande">
@@ -83,12 +84,13 @@
                 <h1>Liste des demandes</h1>
             </div>
             <div class="nbredemande">
-                <p>3 demandes</p>
+                <span id="complaintCounter">3 demandes</span>
             </div>
             </div>
 
         </section>
         <section class="card">
+            <!--
             <article class="onecard">
                 <div class="icons">
                     <i class="fa-solid fa-signal"></i>
@@ -102,11 +104,10 @@
                 </div>
                 <hr class="separator">
                 <div class="edits">
-                    <h5 class="modify"><i class="fa-solid fa-pencil"></i>Modifier</h5>
-                    <h5 class="delete"><i class="fa-solid fa-trash"></i>Supprimer</h5>
+                    <button class="modify"><i class="fa-solid fa-pencil"></i>Modifier</button>
+                    <button class="delete"><i class="fa-solid fa-trash"></i>Supprimer</button>
                 </div>
             </article>
-            <!------------------------------------------------------second card------------------------------------>
             <article class="onecard">
                 <div class="icons">
                     <i class="fa-solid fa-download"></i>
@@ -120,11 +121,11 @@
                 </div>
                 <hr class="separator">
                 <div class="edits">
-                    <h5 class="modify"><i class="fa-solid fa-pencil"></i>Modifier</h5>
-                    <h5 class="delete"><i class="fa-solid fa-trash"></i>Supprimer</h5>
+                    <button class="modify"><i class="fa-solid fa-pencil"></i>Modifier</button>
+                    <button class="delete"><i class="fa-solid fa-trash"></i>Supprimer</button>
                 </div>
             </article>
-            <!------------------------------------------------------third card------------------------------------>
+
             <article class="onecard">
                 <div class="icons">
                     <i class="fa-solid fa-keyboard"></i>
@@ -138,12 +139,14 @@
                 </div>
                 <hr class="separator">
                 <div class="edits">
-                    <h5 class="modify"><i class="fa-solid fa-pencil"></i>Modifier</h5>
-                    <h5 class="delete"><i class="fa-solid fa-trash"></i>Supprimer</h5>
+                    <button class="modify"><i class="fa-solid fa-pencil"></i>Modifier</button>
+                    <button class="delete"><i class="fa-solid fa-trash"></i>Supprimer</button>
                 </div>
             </article>
+        -->
         </section>
     </main>
+    <script src="\Js\script.js"></script>
 </body>
 
 </html>

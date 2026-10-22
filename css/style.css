@@ -1,12 +1,14 @@
 * {
     box-sizing: border-box;
-  }
+}
+
 main {
     background-color: #F7F8FA;
     padding: 30px 20px;
 }
-.headercop{
-    display: none ;
+
+.headercop {
+    display: none;
 }
 
 .hlogo {
@@ -49,6 +51,7 @@ nav {
     font-family: 'Inter', sans-serif;
     font-size: 8px;
 }
+
 input::placeholder {
     font-size: 9px;
 }
@@ -91,21 +94,29 @@ select {
 .bluebutton {
     background-color: #252F3E;
     color: white;
+    border: none;
     padding: 5px 17px;
     margin: 10px 0px;
     border-radius: 11px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
 }
-.listedemande{
+
+
+.listedemande {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0px;
 }
+
 .listhead {
     color: #202A38;
     font-family: 'Inter', sans-serif;
     font-size: 8px;
 }
+
 .nbredemande {
     background-color: #EBEFF4;
     color: #5C697B;
@@ -115,41 +126,49 @@ select {
     font-size: 8px;
     padding: 0px 15px;
 }
-.onecard{
+
+.onecard {
     background-color: white;
     padding: 10px 30px;
     border-radius: 10px;
 }
-.icons{
+
+.icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.icons i{
-    background-color:#EAF0F9;
+
+.icons i {
+    background-color: #EAF0F9;
     color: #587397;
     padding: 15px 15px;
     border-radius: 15px;
 }
-.code{
+
+.code {
     color: #99A4B2;
     font-family: 'Inter', sans-serif;
 }
-.card-head{
+
+.card-head {
     color: #202A38;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
 }
-.sous-card{
+
+.sous-card {
     color: #8792A1;
     font-family: 'Inter', sans-serif;
     font-size: 11px;
 }
-.likebuttons{
+
+.likebuttons {
     display: flex;
     gap: 40px;
 }
-.rectone{
+
+.rectone {
     background-color: #F0F3F7;
     color: #64748B;
     font-family: 'Inter', sans-serif;
@@ -158,7 +177,8 @@ select {
     padding: 5px 18px;
     border-radius: 10px;
 }
-.rectwo{
+
+.rectwo {
     background-color: #FFF0E8;
     color: #BA6444;
     font-family: 'Inter', sans-serif;
@@ -167,35 +187,50 @@ select {
     padding: 5px 18px;
     border-radius: 10px;
 }
-.separator{
+
+.separator {
     border: solid #EDF0F3 1px;
     border-radius: 10px;
 }
-.edits{
+
+.edits {
     display: flex;
     justify-content: right;
     gap: 35px;
-    align-items:center;
+    align-items: center;
     padding-right: 10px;
+    padding-top: 10px;
+    margin-bottom: 20px;
 }
-.modify{
+
+.modify {
     font-family: 'Inter', sans-serif;
     color: #617084;
+    border: none;
+    background-color: white;
+    font-weight: bold;
 }
-.modify i{
+
+.modify i {
     padding-right: 5px;
 
 }
-.delete{
+
+.delete {
     font-family: 'Inter', sans-serif;
     color: #CC626A;
+    border: none;
+    background-color: white;
+    font-weight: bold;
 }
-.delete i{
+
+.delete i {
     padding-right: 5px;
-    
+
 }
-.logiciel-color{
-     background-color: #F0F3F7;
+
+.logiciel-color {
+    background-color: #F0F3F7;
     color: #64748B;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
@@ -204,8 +239,8 @@ select {
     border-radius: 10px;
 }
 
-.normale-color{
-     background-color: #FFF5DF;
+.normale-color {
+    background-color: #FFF5DF;
     color: #A67A2B;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
@@ -213,8 +248,9 @@ select {
     padding: 5px 18px;
     border-radius: 10px;
 }
-.Materiel-color{
-     background-color: #F0F3F7;
+
+.Materiel-color {
+    background-color: #F0F3F7;
     color: #64748B;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
@@ -223,8 +259,8 @@ select {
     border-radius: 10px;
 }
 
-.Basse-color{
-     background-color: #E8F6EE;
+.Basse-color {
+    background-color: #E8F6EE;
     color: #388867;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
@@ -232,9 +268,9 @@ select {
     padding: 5px 18px;
     border-radius: 10px;
 }
-.card{
+
+.card {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
-
