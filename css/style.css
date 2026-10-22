@@ -117,14 +117,14 @@ select {
     font-size: 8px;
 }
 
-.nbredemande {
+ .nbredemande {
     background-color: #EBEFF4;
     color: #5C697B;
     border-radius: 10px;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
     font-size: 8px;
-    padding: 0px 15px;
+    padding: 5px 15px;
 }
 
 .onecard {
@@ -133,7 +133,7 @@ select {
     border-radius: 10px;
 }
 
-.icons {
+.iconsAligned {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,6 +164,7 @@ select {
 }
 
 .likebuttons {
+    margin-top: 50px;
     display: flex;
     gap: 40px;
 }
@@ -190,6 +191,7 @@ select {
 
 .separator {
     border: solid #EDF0F3 1px;
+    margin-top: 40px;
     border-radius: 10px;
 }
 
