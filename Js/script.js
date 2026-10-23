@@ -1,5 +1,6 @@
-const previousComplaints = [
+let previousComplaints = [
     {
+        id: 1,
         Titre: "Wi-fi instable",
         Description: "Le réseau se déconnecte régulièrement.",
         Category: "Réseau",
@@ -7,6 +8,7 @@ const previousComplaints = [
 
     },
     {
+        id: 2,
         Titre: "Installation d’un logiciel",
         Description: "Installer un logiciel sur le poste.",
         Category: "Logiciel",
@@ -14,16 +16,27 @@ const previousComplaints = [
 
     },
     {
+        id: 3,
         Titre: "Clavier défectueux",
         Description: "Certaines touches ne fonctionnent plus.",
         Category: "Matériel",
         priority: "Basse"
 
-    }
+    },
 ]
+/*==================================================================*/
 
-/////////////////////////////////////////STATIC CARDS///////////////////////////////////////////////////
+const titreInput = document.getElementById("titreInput");
+const descproblem = document.getElementById("descproblem");
+const categoryProblem = document.getElementById("categoryProblem");
+const priorityProblem = document.getElementById("priorityProblem");
+const buttonAjouter = document.getElementById("buttonAjouter");
+
+categoryProblem.value = "";
+priorityProblem.value = "";
+/*===================================================================*/
 const cardContainer = document.querySelector(".card");
+let editingId = null;
 
 for (let i = 0; i < previousComplaints.length; i++) {
 
@@ -125,11 +138,12 @@ for (let i = 0; i < previousComplaints.length; i++) {
     deleteButton.prepend(deleteIcon);
     statiCard.appendChild(deleteButton);
 
-    deleteButton.addEventListener("click", (deLete) => {
-        if(confirm("are you sure ?") == true ){
-            statiCard.remove(deLete);
+    deleteButton.addEventListener("click", () => {
+        if (confirm("Vous étes sur de supprimer cette carte ?")) {
+            statiCard.remove();
         }
     });
+
 
 
     const modifyButton = document.createElement("button");
@@ -140,6 +154,19 @@ for (let i = 0; i < previousComplaints.length; i++) {
     modifyButton.prepend(modifyIcon);
     statiCard.appendChild(modifyButton);
 
+    modifyButton.addEventListener("click", () => {
+        if (confirm("Vous étes sur de modifier cette carte ?")) {
+            isediting = true;
+            buttonAjouter.textContent = "Modifier La Carte"
+            titreInput.value = userTitle.textContent;
+            descproblem.value = userDescription.textContent;
+            categoryProblem.value = userCategory.textContent;
+            priorityProblem.value = userPriority.textContent;
+
+        }
+    });
+
+
     const editdeleteContainer = document.createElement("div");
     editdeleteContainer.classList.add("edits");
     editdeleteContainer.appendChild(deleteButton);
@@ -148,22 +175,6 @@ for (let i = 0; i < previousComplaints.length; i++) {
 
     cardContainer.appendChild(statiCard);
 }
-
-/////////////////////////////////////////dynamic CARDS///////////////////////////////////////////////////
-
-
-/*==================================================================*/
-
-const titreInput = document.getElementById("titreInput");
-const descproblem = document.getElementById("descproblem");
-const categoryProblem = document.getElementById("categoryProblem");
-const priorityProblem = document.getElementById("priorityProblem");
-const buttonAjouter = document.getElementById("buttonAjouter");
-
-categoryProblem.value = "";
-priorityProblem.value = "";
-/*===================================================================*/
-
 
 
 //recuperer value mn user//
@@ -179,10 +190,6 @@ buttonAjouter.addEventListener("click", (event) => {
         alert("fill in the field pls");
         return;
     }
-    console.log(titreInput.value);
-    console.log(descproblem.value);
-    console.log(categoryProblem.value);
-    console.log(priorityProblem.value);
 
     const newCard = document.createElement("div");
     newCard.classList.add("onecard");
@@ -283,7 +290,7 @@ buttonAjouter.addEventListener("click", (event) => {
     newCard.appendChild(deleteElement);
 
     deleteElement.addEventListener("click", (deLete) => {
-        if(confirm("are you sure ?") == true ){
+        if (confirm("Vous étes sur de supprimer cette carte ?") == true) {
             newCard.remove(deLete);
         }
     });
@@ -295,6 +302,13 @@ buttonAjouter.addEventListener("click", (event) => {
     modifyElement.classList.add("modify");
     modifyElement.prepend(modifyIcon);
     newCard.appendChild(modifyElement);
+
+    modifyElement.addEventListener("click", (modifier) => {
+        if (confirm("Vous étes sur de modifier cette carte ?")) {
+        }
+    });
+
+
 
     const editdeletestyle = document.createElement("div");
     editdeletestyle.classList.add("edits");
