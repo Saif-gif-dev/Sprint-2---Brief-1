@@ -21,6 +21,8 @@ const previousComplaints = [
 
     }
 ]
+
+/////////////////////////////////////////STATIC CARDS///////////////////////////////////////////////////
 const cardContainer = document.querySelector(".card");
 
 for (let i = 0; i < previousComplaints.length; i++) {
@@ -117,16 +119,22 @@ for (let i = 0; i < previousComplaints.length; i++) {
 
     const deleteButton = document.createElement("button");
     const deleteIcon = document.createElement("i");
-    deleteIcon.classList.add("fa-solid","fa-trash");
+    deleteIcon.classList.add("fa-solid", "fa-trash");
     deleteButton.textContent = "Supprimer";
     deleteButton.classList.add("delete");
     deleteButton.prepend(deleteIcon);
     statiCard.appendChild(deleteButton);
 
+    deleteButton.addEventListener("click", (deLete) => {
+        if(confirm("are you sure ?") == true ){
+            statiCard.remove(deLete);
+        }
+    });
+
 
     const modifyButton = document.createElement("button");
     const modifyIcon = document.createElement("i");
-    modifyIcon.classList.add("fa-solid","fa-pencil");
+    modifyIcon.classList.add("fa-solid", "fa-pencil");
     modifyButton.textContent = "Modifier";
     modifyButton.classList.add("modify");
     modifyButton.prepend(modifyIcon);
@@ -141,6 +149,7 @@ for (let i = 0; i < previousComplaints.length; i++) {
     cardContainer.appendChild(statiCard);
 }
 
+/////////////////////////////////////////dynamic CARDS///////////////////////////////////////////////////
 
 
 /*==================================================================*/
@@ -150,13 +159,16 @@ const descproblem = document.getElementById("descproblem");
 const categoryProblem = document.getElementById("categoryProblem");
 const priorityProblem = document.getElementById("priorityProblem");
 const buttonAjouter = document.getElementById("buttonAjouter");
+
+categoryProblem.value = "";
+priorityProblem.value = "";
 /*===================================================================*/
 
 
 
 //recuperer value mn user//
 
-buttonAjouter.addEventListener("click", function (event) {
+buttonAjouter.addEventListener("click", (event) => {
     event.preventDefault();
     const titre = titreInput.value;
     const description = descproblem.value;
@@ -175,6 +187,8 @@ buttonAjouter.addEventListener("click", function (event) {
     const newCard = document.createElement("div");
     newCard.classList.add("onecard");
     cardContainer.appendChild(newCard);
+
+
 
     ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -226,7 +240,7 @@ buttonAjouter.addEventListener("click", function (event) {
     categoryElement.textContent = category;
     newCard.appendChild(categoryElement);
 
-  
+
     ///////////////////////////////////////////////////////////////////////////////////////
     const priorityElement = document.createElement("span");
 
@@ -262,15 +276,21 @@ buttonAjouter.addEventListener("click", function (event) {
 
     const deleteElement = document.createElement("button");
     const deleteIcon = document.createElement("i");
-    deleteIcon.classList.add("fa-solid","fa-trash");
+    deleteIcon.classList.add("fa-solid", "fa-trash");
     deleteElement.textContent = "Supprimer";
     deleteElement.classList.add("delete");
     deleteElement.prepend(deleteIcon);
     newCard.appendChild(deleteElement);
 
+    deleteElement.addEventListener("click", (deLete) => {
+        if(confirm("are you sure ?") == true ){
+            newCard.remove(deLete);
+        }
+    });
+
     const modifyElement = document.createElement("button");
     const modifyIcon = document.createElement("i");
-    modifyIcon.classList.add("fa-solid","fa-pencil");
+    modifyIcon.classList.add("fa-solid", "fa-pencil");
     modifyElement.textContent = "Modifier";
     modifyElement.classList.add("modify");
     modifyElement.prepend(modifyIcon);
@@ -287,5 +307,4 @@ buttonAjouter.addEventListener("click", function (event) {
     descproblem.value = "";
     categoryProblem.value = "";
     priorityProblem.value = "";
-
 });
